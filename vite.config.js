@@ -1,10 +1,16 @@
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+	plugins: [
+    tailwindcss(),
+  ],
   build: {
     rollupOptions: {
       input: {
         index: 'index.html', // 기본 index.html
+        card: 'src/components/apple-card.html',
+        apple: 'src/pages/apple.html',
       },
     },
   },
